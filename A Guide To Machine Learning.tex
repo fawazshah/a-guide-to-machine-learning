@@ -1,0 +1,104 @@
+%using document class from KOMA-Script
+\documentclass{scrartcl}
+\title{A Guide To Machine Learning}
+\subtitle{}
+\date{}
+\author{Fawaz Shah}
+
+% Packages for adding hyperlinks to table of contents
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=black,  %choose some color if you want links to stand out
+}
+
+%package that allows aligned equations
+\usepackage{amsmath}
+
+%package that allows notation for extra mathematical symbols
+\usepackage{amssymb}
+
+%new commands for popular sets for ease of use
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+% renaming command to writing vectors in bold notation
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+%package for managing images
+\usepackage{graphicx}
+\graphicspath{ {../img/} }
+
+%package for managing hyperlinks
+\usepackage{hyperref}
+
+%package for added blue colored boxes
+\usepackage[most]{tcolorbox}
+
+%package that allowed removing indent from enumerate environment
+\usepackage{enumitem}
+
+%package that allows for negating nearly any symbol
+\usepackage{centernot}
+
+%enlarging line spacing in tables
+\renewcommand{\arraystretch}{2}
+
+\begin{document}
+\large
+\maketitle
+\tableofcontents
+\newpage
+
+\part{Supervised Learning}
+
+Supervised learning methods can be split into two types: regression problems and classification problems.
+\\\\
+In all supervised learning methods we have a \textbf{training set}, which is a collection of data which we already know the right answers for.
+
+\section{Regression}
+
+Regression methods are used for predicting continuous data.
+
+\subsection{Cost functions}
+
+A popular cost function is the \textbf{mean squared error}.
+\begin{equation}
+E = \frac{1}{2n} \sum^{n}_{i = 1} (f(x_{i}) - y_{i})^{2}
+\end{equation}
+
+\subsection{Linear regression}
+
+1 variable\\
+More than 1 variable
+
+\subsection{Logistic regression}
+
+1 variable\\
+More than 1 variable
+
+\section{Classification}
+
+Classification methods are used for predicting discrete data. We try to 
+group data into categories.
+
+\subsection{PCA - Principal Component Analysis}
+
+Dimensionality reduction
+
+\newpage
+\part{Unsupervised Learning}
+
+\section{Clustering}
+
+\subsection{K-means clustering}
+
+\newpage
+\part{Reinforcement Learning}
+
+\end{document}
