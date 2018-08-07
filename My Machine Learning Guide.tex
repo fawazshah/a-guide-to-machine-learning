@@ -74,8 +74,22 @@ E = \frac{1}{2n} \sum^{n}_{i = 1} (f(x_{i}) - y_{i})^{2}
 
 \subsection{Linear regression}
 
-1 variable\\
-More than 1 variable
+We try to fit a straight line to some data.\\
+We have two variables, $ x $ and $ y $.\\
+Our line of best fit will be of the form:
+\begin{equation}
+f(p_{0}, p_{1}) = p_{0}x + p_{1}
+\end{equation}
+where we must choose the optimum parameters ($ p_{0} $, $ p_{1} $) such that our cost function is minimized.
+\\\\
+This is achieved by gradient descent.
+\begin{equation}
+p_{i} := p_{i} - \alpha \frac{\partial}{\partial p_{i}} f(p_{0}, p_{1})
+\end{equation}
+The $ p_{i} $ will converge to their optimal value. $ \alpha $ is what is called the \textbf{learning rate}, which decides how fast the parameters converge.
+\\\\
+Deciding the optimal learning rate for the problem is tricky. If the learning rate is too slow then it will take a long time for the parameters to converge. If the learning rate is too fast then the parameters may overshoot the minimum point.
+
 
 \subsection{Logistic regression}
 
